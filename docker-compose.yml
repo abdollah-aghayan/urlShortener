@@ -1,25 +1,26 @@
-version: '3'
-services: 
-    web : 
-          container_name: web-urlShortener
-          build: ./
-          restart: always
-          ports: 
-              - "8080:8080"
-          depends_on:
-            - mysql
-          environment:
-            - BASE_URL=localhost
-            - DATABASE_USER=root
-            - DATABASE_PASS=root
-            - DATABASE_HOST=mysql
-            - DATABASE_PORT=3306
-    mysql:
-          container_name: mysql-urlShortener
-          build: ./docker/mysql
-          restart: always
-          ports: 
-              - "3306:3306"
-          environment:
-            - MYSQL_DATABASE=urlShortener
-            - MYSQL_ROOT_PASSWORD=root
+version: "3"
+services:
+  web:
+    container_name: web-urlShortener
+    build: ./docker/web
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    environment:
+      - ADDR=localhost
+      - PORT=8080
+      - DATABASE_USER=root
+      - DATABASE_PASS=root
+      - DATABASE_HOST=mysql
+      - DATABASE_PORT=3306
+  mysql:
+    container_name: mysql-urlShortener
+    build: ./docker/mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=urlShortener
+      - MYSQL_ROOT_PASSWORD=root
