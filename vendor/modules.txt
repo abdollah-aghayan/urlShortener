@@ -1,3 +1,5 @@
+# github.com/DATA-DOG/go-sqlmock v1.4.1
+github.com/DATA-DOG/go-sqlmock
 # github.com/go-chi/chi v4.0.2+incompatible
 github.com/go-chi/chi
 # github.com/go-sql-driver/mysql v1.4.1
@@ -5,7 +7,16 @@ github.com/go-sql-driver/mysql
 # github.com/jmoiron/sqlx v1.2.0
 github.com/jmoiron/sqlx
 github.com/jmoiron/sqlx/reflectx
-# github.com/rs/xid v1.2.1
-github.com/rs/xid
+# go.uber.org/atomic v1.6.0
+go.uber.org/atomic
+# go.uber.org/multierr v1.5.0
+go.uber.org/multierr
+# go.uber.org/zap v1.14.1
+go.uber.org/zap
+go.uber.org/zap/buffer
+go.uber.org/zap/internal/bufferpool
+go.uber.org/zap/internal/color
+go.uber.org/zap/internal/exit
+go.uber.org/zap/zapcore
 # google.golang.org/appengine v1.5.0
 google.golang.org/appengine/cloudsql
