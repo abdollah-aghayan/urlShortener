@@ -57,7 +57,6 @@ func (s *urlService) SaveUrl(in string) (*url.Url, *errors.RestErr) {
 // generateID genarate 6 character string for url
 func generateID() string {
 	var chars = []rune("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
-	rand.Seed(time.Now().UnixNano())
 
 	s := make([]rune, 6)
 	for i := range s {
